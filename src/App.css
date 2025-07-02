@@ -1,0 +1,132 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #a1887faa); /* Café pastel */
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #bcaaa4aa); /* Café pastel claro */
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #8d6e63; /* Café suave */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f5f2; /* Beige claro */
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fffaf5; /* Blanco cálido */
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(139, 69, 19, 0.1); /* Café suave */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #5d4037; /* Café oscuro */
+}
+
+/* Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+input {
+  padding: 0.75rem;
+  border: 1px solid #d7ccc8; /* Café claro */
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fbe9e7; /* Rosa pastel */
+}
+
+button {
+  padding: 0.6rem;
+  background-color: #a1887f; /* Café pastel */
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #8d6e63; /* Café más oscuro */
+}
+
+/* Lista de alumnos */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #efebe9; /* Café muy claro */
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  position: relative;
+}
+
+li strong {
+  color: #4e342e; /* Café intenso */
+}
+
+li em {
+  font-style: italic;
+  color: #6d4c41; /* Café medio */
+}
+
+li button {
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  background-color: #bcaaa4; /* Café pastel */
+}
+
+li button:last-child {
+  background-color: #a1887f; /* Café pastel más oscuro */
+}
+
+li button:hover {
+  opacity: 0.9;
+}
