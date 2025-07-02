@@ -16,7 +16,7 @@ function App() {
     localStorage.setItem('alumnos', JSON.stringify(alumnos));
   }, [alumnos]);
 
-  // Calcula la escala de apreciación según el promedio
+  // Calcula la escala de apreciación segun el promedio
   const calcularApreciacion = (promedio) => {
     const nota = parseFloat(promedio);
     if (nota >= 1 && nota <= 3.9) return 'Deficiente';
@@ -30,6 +30,13 @@ function App() {
 
   // Agrega o actualiza un alumno
   const addOrUpdateItem = (item) => {
+    // Limitar el promedio entre 1 y 7
+    const promedio = parseFloat(item.promedio);
+    if (isNaN(promedio) || promedio < 1 || promedio > 7) {
+      alert('El promedio debe estar entre 1 y 7');
+      return;
+    }
+
     if (alumnoAEditar) {
       // Editar
       const nuevos = alumnos.map((al) =>
